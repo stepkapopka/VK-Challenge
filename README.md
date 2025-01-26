@@ -25,3 +25,4 @@ ffmpeg -i "output_480p.mp4" -i "big_buck_bunny_1080p24.y4m" -filter_complex "[0:
 ffmpeg -i "output_720p.mp4" -i "big_buck_bunny_1080p24.y4m" -filter_complex "[0:v]scale=1920:1080[main];[main][1:v]libvmaf='n_threads=10':log_path=vmafOutput4.txt" -f null -
 ffmpeg -i "output_1080p.mp4" -i "big_buck_bunny_1080p24.y4m" -filter_complex "[0:v]scale=1920:1080[main];[main][1:v]libvmaf='n_threads=10':log_path=vmafOutput5.txt" -f null -
 ```
+Полученные лог-файлы находяся в репозитории, а также представлен файл для построения графика на основе полученных лог-файлов (`graph_generate.ipynb`)
